@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  perspective: 1000px; /* Creates the 3D perspective */
+  background: #343645;
+}
+
+.container {
+  position: relative;
+  top: 320px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background: rgba(37, 64, 59, 0.7); /* Semi-transparent dark background */
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.5); /* Inner shadow */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.door {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: translateZ(-50px); /* Positions the door in 3D space */
+  transition: transform 0.5s ease-in-out; /* Adds a smooth transition effect */
+}
+
+.door:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2), transparent); /* Creates the glass effect */
+  backdrop-filter: blur(10px); /* Blurs the background */
+}
+
+.login-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  text-align: center;
+  color: #fff;
+}
+
+.login-form h1 {
+  margin-bottom: 50px;
+}
+
+.login-input {
+  /* color: gold; */
+  width: 200px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+.login-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4fd676; /* Blue button color */
+  color: #fff;
+  cursor: pointer;
+}
